@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<p class="status error">{% if error %}{{error}}{% endif %}</p>
+<form method="post" class="regiser-card card">
+<dl>
+    <dt>username:</dt>
+    <dd><input type="text" name="username" placeholder="enter username"></dd>
+
+    <dt>password:</dt>
+    <dd><input type="password" name="password" placeholder="enter you password" ></dd>
+
+    <dt>email:</dt>
+    <dd><input type="email" name="email" placeholder="enter your email"></dd>
+</dl>
+    <p><input type="submit" value="Sign up"></p>
+</form>
+<p>already have a account?<a href="{{url_for('login')}}">sign in</a></p>
+</body>
+</html>

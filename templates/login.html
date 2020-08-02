@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<h1>Login</h1>
+<p class="error"> {% if error %}
+<strong>Error: {{error}}</strong>
+    {%endif%}
+</p>
+<form method="post">
+    <dl>
+        <dt>username:</dt>
+        <dd><label><input type="text" name="username" placeholder="enter you name" /></label></dd>
+
+        <dt>password:</dt>
+        <dd><label><input type="password" name="password" placeholder="enter your password"/></label></dd>
+    </dl>
+    <p id="signin" class="button button-signin"><input type="submit" value="Login" /></p>
+    <p id="signup" class="button button-signup link-target">create a new account?<a href="{{ url_for('register') }}">sign up</a></p>
+<!--    <p id="visitor" class="button link"><a href=""></a></p>-->
+</form>
+</body>
+</html>
